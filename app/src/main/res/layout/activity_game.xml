@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.GameActivity">
+
+    <ImageView
+        android:id="@+id/iv_header"
+        android:layout_width="200dp"
+        android:layout_height="100dp"
+        android:src="@drawable/ic_header"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="30dp"/>
+
+    <LinearLayout
+        android:id="@+id/ll_playerLeft"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/iv_header"
+        android:orientation="vertical"
+        android:layout_marginLeft="20dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/player_1"
+            android:fontFamily="@font/milkkids"
+            android:textSize="20sp"
+            android:layout_marginBottom="20dp"/>
+
+        <ImageView
+            android:id="@+id/iv_rock_left"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:src="@drawable/ic_rock"
+            android:layout_marginBottom="50dp"/>
+
+        <ImageView
+            android:id="@+id/iv_paper_left"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:src="@drawable/ic_paper"
+            android:layout_marginBottom="60dp"/>
+
+        <ImageView
+            android:id="@+id/iv_scissor_left"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:src="@drawable/ic_scissor"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_playerRight"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/iv_header"
+        android:orientation="vertical"
+        android:layout_marginRight="20dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/player_2"
+            android:fontFamily="@font/milkkids"
+            android:textSize="20sp"
+            android:layout_marginBottom="20dp"/>
+
+        <ImageView
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:src="@drawable/ic_rock"
+            android:layout_marginBottom="50dp"/>
+
+        <ImageView
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:src="@drawable/ic_paper"
+            android:layout_marginBottom="60dp"/>
+
+        <ImageView
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:src="@drawable/ic_scissor"/>
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/iv_reset"
+        android:layout_width="70dp"
+        android:layout_height="100dp"
+        android:src="@drawable/ic_reset"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/ll_playerRight"
+        android:layout_marginTop="30dp"
+        android:layout_marginRight="20dp"/>
+
+    <ImageView
+        android:id="@+id/iv_versus"
+        android:layout_width="70dp"
+        android:layout_height="100dp"
+        android:src="@drawable/ic_versus"
+        app:layout_constraintLeft_toRightOf="@id/ll_playerLeft"
+        app:layout_constraintRight_toLeftOf="@id/ll_playerRight"
+        app:layout_constraintTop_toBottomOf="@id/iv_header"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginBottom="100dp"
+        android:visibility="visible"/>
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
